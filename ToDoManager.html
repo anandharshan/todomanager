@@ -1,0 +1,84 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+		<title>TO DO MANAGER</title> 
+		<meta name="viewport" content="width=device-width, user-scalable=no"/> 
+		<link media="screen" href="./static/css/style.css" type= "text/css" rel="stylesheet">
+		<style>
+		</style>
+<script type="text/javascript">
+/*
+*Funcion for dynamically loading the support files(js and css)
+*/
+function loadjscssfile(filename, filetype){
+ if (filetype=="js"){ //if filename is a external JavaScript file
+  var fileref=document.createElement('script');
+  fileref.setAttribute("type","text/javascript");
+  fileref.setAttribute("src", filename);
+ }
+ else if (filetype=="css"){ //if filename is an external CSS file
+  var fileref=document.createElement("link");
+  fileref.setAttribute("rel", "stylesheet");
+  fileref.setAttribute("type", "text/css");
+  fileref.setAttribute("href", filename);
+ }
+ if (typeof fileref!="undefined")
+  document.getElementsByTagName("head")[0].appendChild(fileref);
+}
+loadjscssfile(".\\static\\js\\todomanager.js", "js");
+</script>
+	</head>
+        <body>
+            <header class="header">
+                <div class="logo">
+                    <img src="./static/images/todoimage.jpg" alt="todolist" height="50px" />
+                </div>
+				<div class= "heading">
+					<strong class="stop">TO DO MANAGER</strong>
+				</div>
+            </header>
+            <div class="content">
+				<div id="display">
+					<section class="newtask">
+						<input type="text" id ="tasktitle" placeholder = "Enter Task Title (*Required)"><br>
+						<textarea  type="text" id ="taskdescription" name="lname" placeholder = "Enter Task Description" rows="5" cols="32"></textarea><br>
+						<div style="margin:10px;">
+							Priority: <select id="taskpriority">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+						</select>
+						</div>
+						<div id="addTaskButton" class="addTask">
+							ADD TASK
+						</div>
+						<div id="notification" class="notification">
+						</div>
+					</section>
+					<section class="trip">
+					<div class="columns">
+						<h4 class="rP">TODO</h4>
+						<ul class="listitems" id="todo">
+
+						</ul>					
+					</div>
+					
+					<div class="columns">
+						<h4 class="rP">WORK-IN-PROGRESS</h4>
+					   <ul class="listitems" id="workinprogress">
+						</ul>
+					</div>
+					
+					<div class="columns">
+						<h4 class="rP">COMPLETED</h4>
+					   <ul class="listitems" id="completed">
+						</ul>
+					</div>
+					
+					</section>
+				</div>
+				</div>
+            
+        </body>
+</html>

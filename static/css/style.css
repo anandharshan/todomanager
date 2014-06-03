@@ -1,0 +1,231 @@
+body {
+    margin:0px;
+    padding:0px;
+    color: #000;
+    font-family: Helvetica;
+}
+.heading{
+	padding: 17px;
+	float: left;
+	font-size: 23px;
+}
+.header {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: right;
+	border-bottom-width: 5px;
+	border-bottom-color: red;
+	height: 55px;
+	border-bottom-style: solid;
+}
+.logo {
+    padding:5px 0px 0px 10px;
+    float:left;
+}
+li{
+    margin-left:1px;
+    margin-right:1px;
+}
+.content h1 {
+    font-size: 17px;
+    padding: 10px;
+    margin:0px;
+    background: -webkit-gradient(linear,left top,left bottom,from(#FFCD00),to(#FFBB00));
+    background-color: #FFCD00;
+    text-shadow: 0px 1px 0 #FFFF93;
+    border-bottom:1px solid #FFFF93;
+}
+.content h1 .stop {
+    overflow:hidden;
+    display:block;
+    white-space:nowrap;
+    max-width: 200px;
+    text-overflow: ellipsis;
+}
+.content h3 {
+    padding:0;
+    margin:0;
+    font-size:25px;
+    padding:5px 0px 0px 10px;
+}
+.content .trip {
+    margin-top:3px;
+    font-size:13px;
+	float: left;
+	width: 71%;
+	margin: 10px;
+	border: 1px solid black;
+}
+.content .columns {
+    width:33.1%;
+    float:left;
+    min-height:500px;
+    background:#DBDFE4;
+    padding-bottom:5px;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+.content .columns h4 {
+    margin:0;
+    padding:5px 0px 5px 10px;
+    color:#FFCC33;
+    background: -webkit-gradient(linear,left top,left bottom,from(#656565),to(#343434));
+    background:#343434;
+    border-bottom:1px solid #000;
+    text-shadow:0px 1px 0 #000;
+}
+.content ul.listitems {
+    clear:both;
+    margin:0;
+    padding:0;
+}
+ul.listitems li  .title{
+	font-weight: 400;
+	font-size: x-large;
+	color: white;
+	width: 250px;
+	text-overflow: ellipsis;
+	max-height: 30px;
+	overflow: hidden;
+	float:left;
+}
+ul.listitems li  .description{
+	font-size: 15px;
+	overflow: hidden;
+	line-height: 20px;
+	height: 40px;
+	text-overflow: clip;
+	clear:both;
+}
+input{
+	width: 283px;
+	padding: 5px;
+	margin: 10px;
+}
+input, textarea {
+	border-radius: 4px;
+}
+textarea {
+	resize: none;
+	padding: 10px;
+	margin: 10px;
+}
+select{
+	padding: 5px;
+}
+.content ul.listitems li {
+	margin-bottom: 5px;
+	list-style: none;
+	border: 2px solid black;
+	height: 100px;
+	padding: 5px;
+	-webkit-border-radius: 5px;
+	background:#2C8CF8;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.content ul.listitems li.priority1{
+	border-left: 5px solid red;
+}
+
+.content ul.listitems li.priority2{
+	border-left: 5px solid blue;
+}
+
+.content ul.listitems li.priority3{
+	border-left: 5px solid yellow;
+}
+
+.content ul li:hover {
+    background:#2C8CF8;
+    color:#FFF;
+    -webkit-box-shadow:inset 0 0 40px #0037A5;
+    box-shadow:inset 0 0 40px #0037A5;
+    cursor: pointer;
+}
+.content .columns .rP {
+    margin-left:1px;
+	text-align: center;
+	border: 1px solid red;
+	margin: 3px;
+}
+
+.filter label {
+	display: inline-table;
+	width: 130px;
+	padding: 5px;
+	text-align: right;
+	border: 1px solid #EEE;
+	height: 40px;
+	background-color: white;
+	-webkit-border-radius: 5px;
+}
+
+.filter label span {
+	font-size: 10px;
+	width: 65px;
+	vertical-align: middle;
+	float:none;
+}
+.filter label * {
+	display: inline-table;
+	text-align: left;
+}
+.filter input {
+float: left;
+margin-top: 4px;
+padding: 3px;
+}
+.addTask {
+width:90px;
+color: white;
+font-size: 17px;
+font-weight: bold;
+font-family: sans-serif;
+border: 1px solid;
+padding: 10px 10px;
+margin : 10px;
+text-shadow: 0px -1px 0 black;
+-webkit-border-radius: 10px;
+-webkit-box-shadow: #000 0px 1px 1px, #666 0px -1px 0px;
+background: -webkit-gradient(linear, left top, left bottom, from(#EEAE75), to(#D85824), color-stop(0.5, #ED734A), color-stop(0.5, #D65220), color-stop(0.95, #D85824));
+background-color: #E36031;
+border-color: #FC9 #F63 #F63 #F63;
+}
+.fRight{
+	float: right;
+}
+.newtask{
+	height: 400px;
+	float: left;
+	width: 23%;
+	margin: 10px;
+	padding: 5px;
+	border: 1px inset;
+	box-shadow: inset 0 0 5px #000000;
+	border-radius: 10px;
+}
+.deleteimage{
+	margin-left: 15px;
+}
+.move_to_next_stage{
+	background-color: green;
+	float: right;
+	width: 80px;
+	height: 20px;
+	color: white;
+	font-size: 15px;
+	font-weight: bold;
+	font-family: sans-serif;
+	border: 1px solid;
+	padding: 2px 2px;
+	margin: 3px;
+	text-shadow: 0px -1px 0 black;
+	-webkit-border-radius: 5px;
+	-webkit-box-shadow: #000 0px 1px 1px, #666 0px -1px 0px;
+	text-align: center;
+}
+.notification{
+	color: red;
+}
