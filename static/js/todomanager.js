@@ -14,7 +14,7 @@ function Task( taskTitle, taskDesciption, taskPriority ){
 */
 var MODEL = function(){
 	var fullTaskList = {"tasklist":{"todo":[],"wip":[],"completed":[]}};
-	addToTODO = function(task){
+	var addToTODO = function(task){
 		fullTaskList.tasklist.todo.push(task);
 		return task;
 	},
@@ -74,7 +74,7 @@ var VIEW = function () {
 	*input: the task oobject, and the stage to which the task is to be added.
 	*Html string of the template which is to be created.
 	*/
-	TempleteCreator = function(newTaskObject, stage){
+	var TempleteCreator = function(newTaskObject, stage){
 		var taskTemplate = [], htmlElement;
 		taskTemplate[0] = "<li id = \"taskElement\" class = \"priority"+newTaskObject.task_Priority +"\"  taskid = "+ newTaskObject.task_id +"><div class = \"title\">";
 		taskTemplate[1] = newTaskObject.task_Title;
@@ -130,25 +130,25 @@ var VIEW = function () {
 	*Creates new task object and clears the fields if everything is correct.
 	*/
 	createTask = function(){
-	var tasktitle = document.getElementById("tasktitle").value;
-	if(tasktitle.trim() === ""){
-		document.getElementById("notification").innerText = "* Task Title cannot be empty!!";
-		return false;
-	}
-	var taskdescription = document.getElementById("taskdescription").value;
-	var taskpriority = document.getElementById("taskpriority").value;
-	resetFields();
-	var newTask = new Task(tasktitle , taskdescription , taskpriority);
-	return newTask;
+		var tasktitle = document.getElementById("tasktitle").value;
+		if(tasktitle.trim() === ""){
+			document.getElementById("notification").innerText = "* Task Title cannot be empty!!";
+			return false;
+		}
+		var taskdescription = document.getElementById("taskdescription").value;
+		var taskpriority = document.getElementById("taskpriority").value;
+		resetFields();
+		var newTask = new Task(tasktitle , taskdescription , taskpriority);
+		return newTask;
 	},
 	/*
 	*Resets all the input fields in the add Task session.
 	*/	
 	resetFields = function (){
-	document.getElementById("tasktitle").value = "";
-	document.getElementById("taskdescription").value = "";
-	document.getElementById("taskpriority").value = 1;
-	document.getElementById("notification").innerText = "";
+		document.getElementById("tasktitle").value = "";
+		document.getElementById("taskdescription").value = "";
+		document.getElementById("taskpriority").value = 1;
+		document.getElementById("notification").innerText = "";
 	};
 	return{
 		createTask:createTask,
@@ -167,7 +167,7 @@ var VIEW = function () {
 */
 var CONTROLLER = function (){
 	
-	addNewTask = function(){
+	var addNewTask = function(){
 		var task = VIEW.createTask();
 		if(task === null || task === false){
 			return;
@@ -233,13 +233,13 @@ var UTILS = function () {
 	*input: an Array of objects, a key and value.
 	*output: index of the first object in the array which has a key having the  specified value.
 	*/
-	findIndexInArrayWithKeyValuePair = function (arr, key, value) {
-    	for (var i = 0; i < arr.length; i++) {
-     	  	if (arr[i][key] === value) {
-          		return(i);
-       		}
-    	}
-    	return(-1);
+	var findIndexInArrayWithKeyValuePair = function (arr, key, value) {
+	    	for (var i = 0; i < arr.length; i++) {
+	     	  	if (arr[i][key] === value) {
+	          		return(i);
+	       		}
+	    	}
+	    	return(-1);
 	};
 	return{
 		findIndexInArrayWithKeyValuePair:findIndexInArrayWithKeyValuePair
